@@ -1,0 +1,1 @@
+web: gunicorn fx_class.wsgi:application --log-file - --log-level debug
