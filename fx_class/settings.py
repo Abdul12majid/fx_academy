@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://tweeter-production-32ff.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://fxacademy-production.up.railway.app/']
 
 ROOT_URLCONF = 'fx_class.urls'
 
