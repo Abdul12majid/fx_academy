@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+import environ
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-vl&23qiphs)422%j8u8%2j3&#9o#yfut6(r26%(yuv8=gw9e(w'
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -135,7 +137,7 @@ STATICFILES_DIRS=[
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-COINBASE_COMMERCE_API_KEY = 'ecd887c3-5866-4350-b518-51f530c16b4f'
+COINBASE_COMMERCE_API_KEY = env('COINBASE_COMMERCE-API_KEY')
 #coinbase api key= ecd887c3-5866-4350-b518-51f530c16b4f
-COINBASE_COMMERCE_WEBHOOK_SHARED_SECRET= 'f8340cbd-8f3e-4f7d-a7af-5dfe3292015c'
+COINBASE_COMMERCE_WEBHOOK_SHARED_SECRET= env('COINBASE_COMMERCE_WEBHOOK_SHARED_SECRET')
 

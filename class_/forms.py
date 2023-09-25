@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from .models import Student
+from .models import Student, Question
 
 
 class RegisterForm(ModelForm):
@@ -16,4 +16,18 @@ class RegisterForm(ModelForm):
 
 			    'name':'Name',
 			    'registering_for':'Class',
+			    }
+
+class QuestionForm(ModelForm):
+	class Meta:
+		model=Question
+		fields=('question',)
+		widgets={
+
+			    'question':forms.TextInput(attrs={'class':'form-control', 'style':'color:white;', 'placeholder':'Ask question here *', 'type':'text', 'name':'your-name'}),
+			}
+		labels={
+
+			    'question':'Question',
+			    
 			    }
